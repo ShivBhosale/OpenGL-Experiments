@@ -114,12 +114,12 @@ void draw_ground(){
   for(float tile = -1.0; tile <= 1.0; tile += spacing){
     //z
     glColor3d(0.0, 1.0, 0.0);
-    c = y_cors.end()-y_cors.begin();
+    c = 0 ; // y_cors.end()-y_cors.begin();
       for(float tile_div = -1.0; tile_div < 1.0; tile_div += spacing){ 
-        glVertex3d(tile_div+spacing, y_cors[m][c], tile);
-        glVertex3d(tile_div, y_cors[m][c-1], tile);
+        glVertex3d(tile_div+spacing, y_cors[m][c+1], tile);
+        glVertex3d(tile_div, y_cors[m][c], tile);
         r_last = y_cors[m][c];
-        c--;
+        c++;
       }
       m++;
   }
