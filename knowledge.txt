@@ -1,0 +1,35 @@
+Challenge 001 is to make a ice rpg game framework in C++ and record all your knowledge here. The framework will only consist of a nice isometric GUI. Haha that's all
+------
+Reasons to choose C++ is because it is very close to the hardware and I really wanna learn it. Haha
+
+------
+I will first require an engine structure.
+
+- game will have a start screen. A Menu
+-- Menu will have 2 options: Play and Settings
+--- Settings will only allow sound control for now
+---- Play will allow the users to choose from a save state. N allowed.
+
+The engine needs to have graphics, but I think it will first have a neat code structure. The raw data will then be displayed onto a GUI.
+Will require a template game loop as well.
+
+What will be in the game loop: Game
+What wont be in the game loop: Menu Screen -X Skipped for now. Don't need a menu screen. It's for losers
+-----
+
+Settings: Lua is used widely for storing config settings
+Saving a game: Serialization is needed.
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------
+PROGRAMMING CONCEPTS LEARNED!
+=============================
+
+- char comparision has to done as var == 'c' and not as var == "c". Second is interpreted as a cahr-pointer comparision.
+- Inorder to run a GLUT code run the following command: g++ -std=c++14 file.cpp -lGL -lGLU -lglut
+-- That helps to link all the libraries. "-std=c++14" is optional
