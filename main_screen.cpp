@@ -119,7 +119,6 @@ void draw_ground(){
 }
 
 void draw_ball(float height){
-
   glColor3f(1.0f, 1.0f, 1.0f);
   glTranslatef(-rad*cos(theta), height , rad*sin(theta));
   glutSolidSphere(0.05f,10,10);
@@ -257,6 +256,7 @@ void renderScene(void) {
   // change speed later
   // height += 0.001f;
 
+  // swaps the buffers for double buffering
   glutSwapBuffers();
 }
 

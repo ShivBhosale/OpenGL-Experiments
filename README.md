@@ -14,6 +14,7 @@ Basic functionalities/features:
 - combo for jump + movements while in jump
 - Procedurally generated ground. Everytime a new ground will be generated. Not of any use but to test my algorithm skills
 - ball now looks like a wire ball just for the fun
+
 ------------------------------------------------------
 
 To Do/ideas:
@@ -28,6 +29,7 @@ A very simple procedural ground generation algorithm:
 
 
 ![Alt text](/procedural_ground_generation.png?raw=true "My procedural ground generation algo")
+
 ------------------------------------------------------
 
 Some important concepts to remember:
@@ -41,6 +43,7 @@ XORing toggles the values in the value
 
 So in the glutInitDisplayMode(A|B|C) sets A,B and C as the bitmasks and initializes the display mode by
 kind of setting some specifc options true!
+
 ------------------------------------------------------
 
 -Double Buffering
@@ -54,12 +57,14 @@ To overcome this, we prepare another decoy buffer. when we send a frame to the g
 We draw this frame 1 and also store it into the second buffer. While drawing the second frame, we show image from the buffer (i.e. first frame) and swap the buffer once the second image is completely drawn.
 
 This creates an effect of contant buffering
+
 -----------------------------------------------------
 
 -Depth Buffer
 glEnable(GL_DEPTH_TEST);
 this function allows the application to have a proper depth wise rendering.
 This makes the animation look much more believable
+
 -----------------------------------------------------
 
 -GL Line primitives
@@ -75,3 +80,10 @@ GL_POLYGON can be used to directly define this polygon
 Here are my tests for polygon render:
 
 ![Alt text](/polygon_render.png?raw=true "strangeness")
+
+---------------------------------------------------------
+
+-Overlays
+requires hardware that supports it but it is basically display over the current display so as to not disturb it's contents
+
+
