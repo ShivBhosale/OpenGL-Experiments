@@ -196,7 +196,7 @@ void renderScene(void) {
   // glBegin and glEnd handle all the drawing part
   // the arguument to the function are the primitives that the vertices are treated as
 
-  glBegin(GL_LINES);
+  glBegin(GL_POLYGON);
   // GL_TRIANGLES: Looks super messed up
   // GL_LINES: looks normie (default)
   // GL_POLYGON: looks stupid
@@ -227,7 +227,7 @@ int main(int argc, char **argv) {
   glutInitWindowSize(720,520);
   glutCreateWindow("Polygon test");
   // c un comment this to make it full screen
-  glutFullScreen();
+  // glutFullScreen();
 
   // allows the objects to have proper depth when being rendered wrt the camera
   glEnable(GL_DEPTH_TEST);

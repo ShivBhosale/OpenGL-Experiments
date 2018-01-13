@@ -72,4 +72,6 @@ similarly we have GL_TRIANGLE_FAN, GL_QUADS etc
 
 GL_POLYGON can be used to directly define this polygon
 
-Here are my tests	
+Here are my tests for polygon render:
+
+![Alt text](/polygon_render.png?raw=true "strangeness")
