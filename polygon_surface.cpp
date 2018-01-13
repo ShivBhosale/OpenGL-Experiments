@@ -197,65 +197,16 @@ void renderScene(void) {
   // the arguument to the function are the primitives that the vertices are treated as
 
   glBegin(GL_LINES);
+  // GL_TRIANGLES: Looks super messed up
+  // GL_LINES: looks normie (default)
+  // GL_POLYGON: looks stupid
 
   draw_ground();
-
-  // draw_pillar(cylinder_top);
-  // un comment this one if you wann see the ball not move
-  // glRotatef(-angle, 0.0f, 1.0f, 0.0f);
-  draw_ball(height);
-
-  // theta += 0.005;
-  // to not let jumps weird
-
-  if(jump_move_limit<0){
-      jump_combo[1] = false;
-      jump_combo[2] = false;
-  }
-  jump_move_limit--;
-  if(inJump){
-    // These take care of movement while jumps in the air
-    if(jump_combo[1]){
-        theta += 0.07;
-      }
-      if(jump_combo[2]){
-        theta -= 0.07;
-      }
-    // increment time
-    time_sys += 1.0f;
-    if(inital_velocity > 0.0 && time_sys <12.0){
-      
-      if ((int)time_sys % 2 == 1){
-        height = height + inital_velocity;
-        inital_velocity/=step;
-      }
-        }
-        else if(inital_velocity <= 0.1 && time_sys <=24.0){
-      if ((int)time_sys % 2 == 1){
-        height = height - inital_velocity;
-        inital_velocity*=step;
-      }
-        }
-        else{
-          if (time_sys >= 25.0){
-            height = 0.0f;
-            time_sys = 0.0f;
-            inJump = false;
-            // jump_combo[0] = false;
-            jump_combo[1] = false;
-            jump_combo[2] = false;
-            inital_velocity = 0.1f;
-          }
-        }
-  }
+  // draw_ball(height);
 
   glEnd();
 
   angle +=0.2f;
-  // cylinder top
-  cylinder_top -= 0.004f;
-  // change speed later
-  // height += 0.001f;
 
   glutSwapBuffers();
 }
@@ -274,9 +225,9 @@ int main(int argc, char **argv) {
   glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
   glutInitWindowPosition(100,100);
   glutInitWindowSize(720,520);
-  glutCreateWindow("Shiv ka game");
+  glutCreateWindow("Polygon test");
   // c un comment this to make it full screen
-  //glutFullScreen();
+  glutFullScreen();
 
   // allows the objects to have proper depth when being rendered wrt the camera
   glEnable(GL_DEPTH_TEST);

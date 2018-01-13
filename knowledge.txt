@@ -33,3 +33,13 @@ PROGRAMMING CONCEPTS LEARNED!
 - char comparision has to done as var == 'c' and not as var == "c". Second is interpreted as a cahr-pointer comparision.
 - Inorder to run a GLUT code run the following command: g++ -std=c++14 file.cpp -lGL -lGLU -lglut
 -- That helps to link all the libraries. "-std=c++14" is optional
+---------------------------------------------------------------------------------------------------
+
+Here are some very important concepts that I have learned while developing OpenGL stuff:
+BITMASKING:
+
+you can allow some value to be modified by ANDing, ORing or XORing it with a bit mask
+
+So, ANDing gets the intersection between value and mask
+ORing, gets union of value and mask
+XORing toggles the values in the value
